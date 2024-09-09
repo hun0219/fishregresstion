@@ -17,7 +17,7 @@ def lr_api(l, url="http://localhost:8001/lr_fish"):
 
     return r
 
-def knn_api(l, w, n, url="http://localhost:8002/lr_fish"):
+def knn_api(l, w, n_neighbors, url="http://localhost:8002/lr_fish"):
     headers = {
         'accept': 'application/json',
     }
