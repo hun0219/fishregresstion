@@ -1,6 +1,6 @@
 [project]
 name = "fishregresstion"
-version = "0.1.0"
+version = "0.2.0"
 description = "Default template for PDM package"
 authors = [
     {name = "hun0219", email = "gsw98000@gmail.com"},
@@ -14,7 +14,10 @@ license = {text = "MIT"}
 
 
 [tool.pdm]
-distribution = false
+distribution = true
+
+[project.scripts]
+pp = fr.cli:predict
 
 [tool.pdm.dev-dependencies]
 note = [
