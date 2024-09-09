@@ -25,7 +25,7 @@ def knn_api(l, w, n, url="http://localhost:8002/lr_fish"):
     params = {
         'length': l,
         'weight': w,
-        'n_neighbors': n
+        'n_neighbors': '5'
     }
 
     response = requests.get(url, params=params, headers=headers)
