@@ -21,7 +21,7 @@ COPY src/fishregresstion/main.py /code/
 #@@@@ 모델 서빙만(의존성의 위 BASE 이미지에서 모두 설치 했다.)
 # 컨테이너가 실행될때 requirements.txt안에꺼 설치 / .toml디펜던시 설정넣은거(.toml에 있음)
 #RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
-RUN pip install --no-cache-dir --upgrade git+https://github.com/hun0219/fishmlserv.git@0.2.0/cli
+RUN pip install --no-cache-dir --upgrade git+https://github.com/hun0219/fishregresstion.git@0.2.0/cli
 #RUN pip install git+https://github.com/hun0219/fishmlserv.git@1.0.0/k
 
 # 위까지는 이미지를 만들때 처리됨
