@@ -1,14 +1,14 @@
 import requests
 import json
 
-def lr_api(l, w, url="http://localhost:8001/lr_fish"):
+def lr_api(l, url="http://localhost:8001/lr_fish"):
     headers = {
         'accept': 'application/json',
     }
 
     params = {
         'length': l,
-        'weight': w,
+        #'weight': w,
     }
 
     response = requests.get(url, params=params, headers=headers)
