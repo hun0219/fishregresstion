@@ -39,7 +39,7 @@ def knn_api(l, w, n=5, url="http://localhost:8002/fish"):
 
 
 def predict():
-    length = float(input("물고기의 무게를 입력하세요: "))
+    length = float(input("물고기의 길이를 입력하세요: "))
 
     ## weight 예측 선형회귀 API 호출
     weight = lr_api(length)
