@@ -17,7 +17,7 @@ def lr_api(l, url="http://localhost:8001/lr_fish"):
 
     return r
 
-def knn_api(l, w, n_neighbors, url="http://localhost:8002/lr_fish"):
+def knn_api(l, w, n=5, url="http://localhost:8002/fish"):
     headers = {
         'accept': 'application/json',
     }
@@ -25,13 +25,16 @@ def knn_api(l, w, n_neighbors, url="http://localhost:8002/lr_fish"):
     params = {
         'length': l,
         'weight': w,
-        'n_neighbors': '5'
+        'neighbors': n,
     }
 
     response = requests.get(url, params=params, headers=headers)
     j = response.json()
     r = j.get("prediction")
-
+    #print(response)
+    #print(j)
+    #print(r)
+    
     return r
 
 
@@ -44,6 +47,6 @@ def predict():
     ## 물고기 분류 API 호출
     fish_class = knn_api(length, weight)
 
-    print(f"length:{length} 물고기는 weight:{weight}으로 예측되며 종류는 {fish_class}입니다")
+    print(f"길이:{length}의 물고기는 {weight}무게로 예측되며 종류는 {fish_class}입니다")
 
     
